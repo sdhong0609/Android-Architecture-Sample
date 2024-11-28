@@ -1,9 +1,9 @@
 package com.hongstudio.androidarchitecturesample
 
-data class Product(val name: String, val price: Double) {
+class ProductModel : ProductContract.Model {
 
     // 할인 금액 계산 로직
-    fun calculateDiscountedPrice(): Double {
+    override fun calculateDiscountedPrice(name: String, price: Double): Double {
         return if (price >= 1000) {
             price * 0.9 // 10% 할인 적용
         } else {
