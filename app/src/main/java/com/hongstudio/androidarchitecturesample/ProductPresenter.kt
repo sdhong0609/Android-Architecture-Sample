@@ -1,6 +1,8 @@
 package com.hongstudio.androidarchitecturesample
 
-class ProductPresenter(
+import javax.inject.Inject
+
+class ProductPresenter @Inject constructor(
     private val view: ProductContract.View,
     private val model: ProductContract.Model
 ) : ProductContract.Presenter {
