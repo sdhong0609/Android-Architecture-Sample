@@ -10,19 +10,14 @@ import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
 @AndroidEntryPoint
-class MainActivity : AppCompatActivity(), ProductContract.View {
-
-    private lateinit var presenter: ProductPresenter
+class ProductActivity : AppCompatActivity(), ProductContract.View {
 
     @Inject
-    lateinit var model: ProductModel
+    lateinit var presenter: ProductContract.Presenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
-        // Presenter 초기화
-        presenter = ProductPresenter(this, model)
+        setContentView(R.layout.activity_product)
 
         // 버튼 클릭 시 이벤트 처리
         findViewById<Button>(R.id.calculateDiscountButton).setOnClickListener {
