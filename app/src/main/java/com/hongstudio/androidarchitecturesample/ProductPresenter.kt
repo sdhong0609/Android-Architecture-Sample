@@ -2,7 +2,7 @@ package com.hongstudio.androidarchitecturesample
 
 class ProductPresenter(
     private val view: ProductContract.View,
-    private val model: ProductContract.Model
+    private val model: ProductRepository
 ) : ProductContract.Presenter {
 
     override fun onCalculateButtonClick(name: String, price: Double?) {

@@ -16,7 +16,7 @@ class ProductActivity : AppCompatActivity(), ProductContract.View {
         setContentView(R.layout.activity_product)
 
         // Presenter 초기화
-        presenter = ProductPresenter(this, ProductModel())
+        presenter = ProductPresenter(this, ProductRepository)
 
         // 버튼 클릭 시 이벤트 처리
         findViewById<Button>(R.id.calculateDiscountButton).setOnClickListener {
