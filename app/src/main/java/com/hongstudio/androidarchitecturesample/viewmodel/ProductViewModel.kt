@@ -2,7 +2,6 @@ package com.hongstudio.androidarchitecturesample.viewmodel
 
 import androidx.lifecycle.ViewModel
 import com.hongstudio.androidarchitecturesample.model.Product
-import com.hongstudio.androidarchitecturesample.view.ProductUiModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update

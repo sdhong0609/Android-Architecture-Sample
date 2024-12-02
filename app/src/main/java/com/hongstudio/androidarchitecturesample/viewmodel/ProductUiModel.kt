@@ -1,4 +1,4 @@
-package com.hongstudio.androidarchitecturesample.view
+package com.hongstudio.androidarchitecturesample.viewmodel
 
 data class ProductUiModel(
     val name: String,
