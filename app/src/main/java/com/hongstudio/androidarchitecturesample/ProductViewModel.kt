@@ -19,7 +19,8 @@ class ProductViewModel: ViewModel() {
         }
 
         // 비즈니스 로직 호출: 할인 금액 계산
+        val discountedPrice = Product.calculateDiscountedPrice(price)
         // 그 후 상태값 변경
-        _product.value = Product(name, Product.calculateDiscountedPrice(price))
+        _product.value = Product(name, discountedPrice)
     }
 }
