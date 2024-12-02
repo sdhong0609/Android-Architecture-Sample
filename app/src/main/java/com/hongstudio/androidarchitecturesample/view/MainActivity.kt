@@ -1,4 +1,4 @@
-package com.hongstudio.androidarchitecturesample
+package com.hongstudio.androidarchitecturesample.view
 
 import android.os.Bundle
 import android.widget.Button
@@ -8,6 +8,8 @@ import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.asLiveData
+import com.hongstudio.androidarchitecturesample.R
+import com.hongstudio.androidarchitecturesample.viewmodel.ProductViewModel
 
 class MainActivity : AppCompatActivity() {
 
@@ -28,7 +30,7 @@ class MainActivity : AppCompatActivity() {
 
         viewModel.product.asLiveData().observe(this) { product ->
             product?.let {
-                showDiscountedPrice(it.name, it.price)
+                showDiscountedPrice(it.name, it.discountedPrice)
             }
         }
 
